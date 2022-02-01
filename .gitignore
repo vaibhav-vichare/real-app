@@ -1,23 +1,43 @@
-.DS_Store
-node_modules
-/dist
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea
+**/target
+*.iml
+.project
+.vscode
+.settings/
+.classpath
+**/yarn.lock
 
+src/main/resources/public
+
+
+.DS_Store
+**/node_modules
+coverage
+/dist*
+
+/tests/e2e/reports/
+selenium-debug.log
 
 # local env files
 .env.local
 .env.*.local
 
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
 # Editor directories and files
-.idea
 .vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw*
+
+**.log
+/bin/
+
+**/configs/*.yml
+**/configs/*.json
+
+**/.elasticbeanstalk/config.yml
+*-application.properties

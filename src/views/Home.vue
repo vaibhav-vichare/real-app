@@ -1,18 +1,44 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+  <div class="component-wrapper">
+    <div class="component-heading">Real or not?</div>
+    <ImageViewer v-on:result="showResult"></ImageViewer>
+  </div>
+    <div ref="result">
+  <div v-if="showResultView" class="component-wrapper result-view">
+    <div class="component-heading">Results</div>
+    <ResultViewer v-on:result="showResult" :finalResult="finalResult"></ResultViewer>
+  </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import ImageViewer from '@/components/ImageViewer.vue';
+import ResultViewer from '@/components/ResultViewer.vue';
+import {IimageObj} from '@/interfaces/IimageObj';
 @Component({
   components: {
-    HelloWorld,
-  },
+    ImageViewer,
+    ResultViewer
+  }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  showResultView = false;
+  finalResult: IimageObj[] = [];
+
+  showResult(val) {
+    this.showResultView = true;
+    this.finalResult.push(val);
+  }
+
+}
 </script>
+
+<style lang="scss" scoped>
+@import "../assets/styles/common";
+.result-view {
+  margin-top: $building-unit-x20;
+}
+</style>

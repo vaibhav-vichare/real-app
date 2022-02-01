@@ -1,0 +1,11 @@
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+
+@font-face {
+  font-family: "Graphik-Regular";
+  src: local("Graphik-Regular"),
+  url('~@/assets/fonts/Graphik-Regular.woff2') format("woff2");
+  font-style: normal;
+}

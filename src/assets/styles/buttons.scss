@@ -1,0 +1,24 @@
+.primary-button {
+  padding: $building-unit-x2_5;
+  background-color: $brand-color;
+  font-size: $font-size-14;
+  color: $white;
+  font-weight: bold;
+  border-radius: $building-unit;
+  min-width: $building-unit-x20;
+  border: solid 1px silver;
+  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 (-$building-unit-x2_5) $shadow-color;
+}
+
+.disabled-button {
+  padding: $building-unit-x2_5;
+  background-color: $shadow-color;
+  font-size: $font-size-14;
+  color: $text-color;
+  font-weight: bold;
+  border-radius: $building-unit;
+  min-width: $building-unit-x20;
+  border: solid 1px silver;
+  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 (-$building-unit-x2_5) $shadow-color;
+  opacity: 90%;
+}
