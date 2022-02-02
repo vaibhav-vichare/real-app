@@ -29,8 +29,8 @@ header {
 }
 
 section {
-  height: 100vh;
   place-items: center;
+  min-height: 100vh;
 }
 
 footer {
@@ -43,10 +43,12 @@ footer {
 .component-wrapper {
   display: flex;
   flex-direction: column;
-  width: auto;
+  flex-wrap: wrap;
+  width: $building-unit-x120;
   box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 $building-unit-x2_5 $shadow-color;
   border-radius: $building-unit;
   background-color: $white;
+  margin-top: $building-unit-x5;
 }
 
 .component-heading {

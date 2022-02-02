@@ -24,7 +24,6 @@ export default class App extends Vue {
 @import "./assets/styles/common";
 .align-center {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 

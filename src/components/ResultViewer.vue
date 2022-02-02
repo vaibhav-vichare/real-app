@@ -32,10 +32,13 @@ export default class ImageViewer extends Vue {
 @import "../assets/styles/common";
 .result-viewer {
   padding: $building-unit-x5;
+  display: flex;
+  flex-direction: column;
 }
 .image-container {
   padding-bottom: $building-unit-x5;
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
 }
 

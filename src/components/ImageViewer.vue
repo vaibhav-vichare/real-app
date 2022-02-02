@@ -1,7 +1,7 @@
 <template>
   <div class="image-viewer">
     <div class="image-container">
-      <img :src="visibleImage" width="400" />
+      <img :src="visibleImage" width="420" />
     </div>
     <div class="button-container">
       <button @click="getImages" class="primary-button">Real</button>
