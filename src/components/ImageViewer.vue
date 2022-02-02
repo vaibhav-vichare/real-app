@@ -7,7 +7,7 @@
       <button @click="getImages" class="primary-button">Real</button>
       <button class="primary-button" @click="openModal()">Not real</button>
     </div>
-    <Modal :heading="modalHeading" v-on:modalState="modalState" v-on:reasonsRecieved="sendReasonsToHome" v-show="showModal"></Modal>
+    <Modal :heading="modalHeading" :selectedImage="visibleImage" v-on:modalState="modalState" v-on:reasonsRecieved="sendReasonsToHome" v-show="showModal"></Modal>
   </div>
 </template>
 
@@ -23,7 +23,6 @@ import {IimageObj} from '@/interfaces/IimageObj';
 })
 export default class ImageViewer extends Vue {
   visibleImage =  '';
-  selectedImage = '';
   showModal: boolean;
   createImageObj: IimageObj;
   data() {

@@ -6,24 +6,25 @@
       </div>
     </div>
     <div class="button-container">
-      <button class="primary-button">Generate report</button>
+      <button class="primary-button" @click="goToReport">Generate report</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import {Vue, Component, Prop} from 'vue-property-decorator';
-@Component({
-  components: {
-  }
-})
+import {Getter} from 'vuex-class';
+import {ImageStoreObj} from '@/interfaces/ImageStoreObj';
+@Component
 export default class ImageViewer extends Vue {
+  @Getter currentObject!: ImageStoreObj;
+
   @Prop()
   finalResult;
 
-  data() {
-    return {
-    };
+  goToReport() {
+    this.currentObject.data = this.finalResult;
+    this.$router.push({ name: 'Report'});
   }
 }
 </script>

@@ -6,6 +6,9 @@
     <section class="align-center">
       <router-view/>
     </section>
+    <footer>
+      Real app
+    </footer>
   </div>
 </template>
 <script lang="ts">

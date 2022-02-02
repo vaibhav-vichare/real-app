@@ -54,13 +54,16 @@ export default class ReasonSelector extends Vue {
       } else {
         this.reasons.push(this.otherReason);
         this.selectedReasons.push(this.otherReason);
-        this.otherReason = '';
         this.duplicateEntry = false;
         this.$emit('reasonsSelected', this.selectedReasons);
+        this.otherReason = '';
+        this.selectedReasons = [];
         this.$emit('modalHide', false);
       }
     } else {
       this.$emit('reasonsSelected', this.selectedReasons);
+      this.otherReason = '';
+      this.selectedReasons = [];
       this.$emit('modalHide', false);
     }
 

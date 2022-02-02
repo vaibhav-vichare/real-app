@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  font-family: "Graphik-Regular","Helvetica Neue",helvetica,arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $text-color;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 (-$building-unit-x2_5) $shadow-color;
+  border-bottom:  solid 1px $border-color;
+  background-color: $brand-color;
+  border-top-left-radius: $building-unit;
+  border-top-right-radius: $building-unit;
+  .heading {
+    padding: $building-unit-x5;
+    font-size: $building-unit-x5 + $building-unit;
+    color: $white;
+    font-weight: 200;
+  }
+}
+
+section {
+  height: 100vh;
+  place-items: center;
+}
+
+footer {
+  bottom: 0;
+  background-color: $text-color;
+  color: $white;
+  padding: $building-unit-x2;
+}
+
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 $building-unit-x2_5 $shadow-color;
+  border-radius: $building-unit;
+  background-color: $white;
+}
+
+.component-heading {
+  font-size: $font-size-20;
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+  background-color: #E8E8E8;
+  padding: $building-unit-x5;
+  border-top-left-radius: $building-unit;
+  border-top-right-radius: $building-unit;
+}

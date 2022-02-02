@@ -3,7 +3,7 @@
     <div class="modal-wrapper">
       <div class="component-heading">{{ heading }}</div>
       <div class="modal-body">
-        <ReasonSelector v-on:modalHide="closeModal" v-on:reasonsSelected="sendReasons"></ReasonSelector>
+        <ReasonSelector v-on:modalHide="closeModal" v-on:reasonsSelected="sendReasons" :selectedImage="selectedImage"></ReasonSelector>
       </div>
     </div>
   </div>
@@ -20,6 +20,9 @@ import ReasonSelector from '@/components/ReasonSelector.vue';
 export default class Modal extends Vue {
   @Prop()
   heading: string;
+
+  @Prop()
+  selectedImage;
 
   data() {
     return {
