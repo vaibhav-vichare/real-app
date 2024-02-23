@@ -4,8 +4,8 @@
       <img :src="visibleImage" width="420" />
     </div>
     <div class="button-container">
-      <button @click="getImages" class="primary-button">Real</button>
-      <button class="primary-button" @click="openModal()">Not real</button>
+      <button @click="getImages" class="primary-button">Accept</button>
+      <button class="primary-button" @click="openModal()">Reject</button>
     </div>
     <Modal :heading="modalHeading" :selectedImage="visibleImage" v-on:modalState="modalState" v-on:reasonsRecieved="sendReasonsToHome" v-show="showModal"></Modal>
   </div>
